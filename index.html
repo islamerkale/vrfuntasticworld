@@ -170,18 +170,19 @@
             background: radial-gradient(circle at 30% 30%, transparent 40%, rgba(30, 64, 175, 0.6) 100%);
             border-radius: 50%;
         }
+        
 
         /* Rocket Animations */
         .rocket-container {
             position: fixed;
-            
+            bottom: 550px; /* başlangıç */
             width: 120px;
             height: 180px;
             z-index: 1;
             pointer-events: none;
             opacity: 0;
         }
-
+     
         .rocket-right {
             right: 30%;
             animation: rocket-launch-right 5s ease-out forwards;
@@ -189,14 +190,14 @@
         }
 
         .rocket-left {
-            left: 40%;
+            left: 30%;
             animation: rocket-launch-left 5s ease-out forwards;
-            animation-delay: 0.8s;
+            animation-delay: 0.5s;
         }
 
         .rocket {
             width: 100%;
-            height: 250%;
+            height: 300%;
             background: url('bumbercarsvfw.png') center/contain no-repeat;
             filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
             animation: rocket-float 2s ease-in-out infinite;
@@ -1759,7 +1760,18 @@
                 height: 320px;
                 top: -160px;
             }
+            .rocket-right {
             
+            right: 30%;
+            animation: rocket-launch-right 5s ease-out forwards;
+            animation-delay: 0.5s;
+        }
+
+        .rocket-left {
+            left: 40%;
+            animation: rocket-launch-left 5s ease-out forwards;
+            animation-delay: 0.8s;
+        }
             .hero h1 {
                 font-size: 48px;
             }
@@ -1826,9 +1838,36 @@
                 grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
             }
 
+            .rocket {
+            width: 100%;
+            height: 150%;
+            bottom: 750px;
+           
+        }
+
+
+        .rocket-right {
+            right: 40%;
+            animation: rocket-launch-right 5s ease-out forwards;
+            animation-delay: 0.5s;
+        }
+
+        .rocket-left {
+            left: 60%;
+            animation: rocket-launch-left 5s ease-out forwards;
+            animation-delay: 0.5s;
+            
+        }
           
+        .mobile-menu{
+            margin-top: 25px;
+        }
+       
+       
+           
             .hero h1 {
                 font-size: 36px;
+                margin-top: 130px;
             }
             
             .hero p {
@@ -1923,18 +1962,7 @@
             font-weight: 600;
             animation: pulse 2s infinite;
         }
-        .rocket-right {
-            
-            right: 50%;
-            animation: rocket-launch-right 5s ease-out forwards;
-            animation-delay: 0.5s;
-        }
-
-        .rocket-left {
-            left: 70%;
-            animation: rocket-launch-left 5s ease-out forwards;
-            animation-delay: 0.8s;
-        }
+     
         @keyframes pulse {
             0%, 100% {
                 opacity: 1;
@@ -1978,7 +2006,7 @@
             
             <div class="logo">
                 <span class="logo-icon">🚀</span>
-                <span>VR Fantastic World</span>
+                <span>VR Funtastic World</span>
                 
             </div>
  <!-- Gift Card Button (Mobile Only) -->
@@ -2023,7 +2051,7 @@
                 <li><a href="#bumper-cars">Bumper Cars</a></li>
                 <li><a href="#experiences">Experiences</a></li>
                 <li><a href="#locations">Locations</a></li>
-                <li><a href="#pricing">Pricing</a></li>
+               
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
@@ -2117,22 +2145,30 @@
             <!-- Games Grid -->
             <div class="games-grid">
                 <!-- New Games -->
-                <div class="game-card" data-game="mine-coaster" data-category="rollercoaster">
-                    <div class="game-image" style="background-image: url('mine-coaster.jpg')"></div>
-                    <div class="game-content">
-                        <h3>MINECRAFT ROLLER COASTER</h3>
-                        <p>Experience the blocky world of Minecraft like never before! Ride through amazing roller coaster tracks built in the iconic Minecraft style.</p>
-                        <div class="game-duration">
-                            <i class="far fa-clock"></i>
-                            <span>DURATION: 8:15</span>
-                        </div>
-                        <div class="game-type">
-                            <i class="fas fa-tag"></i>
-                            <span>MINECRAFT THEME ROLLER COASTER</span>
-                        </div>
-                        <div class="view-details">View Details <i class="fas fa-arrow-right"></i></div>
-                    </div>
-                </div>
+               <div class="game-card" data-game="mine-coaster" data-category="rollercoaster">
+    <div class="game-image" style="background-image: url('mine-coaster.jpg')"></div>
+
+    <div class="game-content">
+        <h3 class="game-title">MINECRAFT ROLLER COASTER</h3>
+
+        <div class="game-details">
+            <p>
+                Experience the blocky world of Minecraft like never before! Ride through amazing roller coaster tracks built in the iconic Minecraft style.
+            </p>
+
+            <div class="game-duration">
+                <i class="far fa-clock"></i>
+                <span>DURATION: 8:15</span>
+            </div>
+
+            <div class="game-type">
+                <i class="fas fa-tag"></i>
+                <span>MINECRAFT THEME ROLLER COASTER</span>
+            </div>
+        </div>
+    </div>
+</div>
+
 
                 <div class="game-card" data-game="water-splash" data-category="rollercoaster">
                     <div class="game-image" style="background-image: url('water-splash.jpg')"></div>
@@ -2510,7 +2546,7 @@
                         </div>
                     </div>
                     
-                    <a href="https://squareup.com/gift/EBEG2N4C45YCK/order" class="ride-card-button modern-button" target="_blank">
+                    <a href="https://www.clover.com/pay-widgets/de658ca1-60e1-4283-b91c-1205dc52f8b9" class="ride-card-button modern-button" target="_blank">
                         <i class="fas fa-shopping-cart"></i>
                         <span>Buy 10-Ride Card Now</span>
                     </a>
@@ -2587,7 +2623,7 @@
                     <div class="footer-info">
                         <div class="footer-logo">
                             <i class="fas fa-rocket"></i>
-                            <span>VR Fantastic World</span>
+                            <span>VR Funtastic World</span>
                         </div>
                         <div class="footer-address">
                             <strong>Address:</strong><br>
@@ -2601,8 +2637,7 @@
                             <strong>Hours:</strong><br>
                             10am - 6pm<br>
                             Monday to Sunday<br><br>
-                            <strong>Calista Hours:</strong><br>
-                            10am - 6pm Daily
+                           
                         </div>
                     </div>
                     
@@ -2701,7 +2736,7 @@
                 <span>Booking available only for today: <span id="todayDate"></span></span>
             </div>
             
-            <form class="booking-form" id="bookingForm">
+            <form class="booking-form" id="bookingForm" action="https://formspree.io/f/mkgdekjn" method="POST">
                 <div class="form-row">
                     <div class="form-group">
                         <label for="fullName">Full Name *</label>
@@ -2755,27 +2790,6 @@
                             <option value="bumper-cars">Bumper Cars</option>
                         </select>
                     </div>
-                </div>
-                
-                <div class="form-group">
-                    <label for="game">Select Game (Optional)</label>
-                    <select id="game" name="game">
-                        <option value="">Any Available Game</option>
-                        <option value="mine-coaster">Minecraft Roller Coaster</option>
-                        <option value="water-splash">Water Splash Adventure</option>
-                        <option value="mario-adventure">Super Mario Adventure</option>
-                        <option value="gamma-bear">Gamma Bear's Happy World</option>
-                        <option value="dungeon-rampage">Dungean Rampage</option>
-                        <option value="atlantis">The Lost Empire Atlantis</option>
-                        <option value="mummy">Mummy</option>
-                        <option value="cj7">Yangzte River (CJ7)</option>
-                        <option value="future-terminator-2">Future Terminator 2</option>
-                        <option value="zombie-master">Zombie Master</option>
-                        <option value="future-terminator">Future Terminator</option>
-                        <option value="mid-autumn">Mid Autumn Festival</option>
-                        <option value="dread-eye">Dread Eye</option>
-                        <option value="adventures">Adventures</option>
-                    </select>
                 </div>
                 
                 <div class="form-group">
@@ -3188,7 +3202,6 @@
         const closeBookingModal = document.querySelector('.close-booking-modal');
         const bookNowBtn = document.getElementById('bookNowBtn');
         const ctaBookNowBtn = document.getElementById('ctaBookNowBtn');
-        const bookingForm = document.getElementById('bookingForm');
         const notification = document.getElementById('notification');
         const notificationText = document.getElementById('notificationText');
         const todayDateElement = document.getElementById('todayDate');
@@ -3237,35 +3250,6 @@
                 bookingModal.style.display = 'none';
                 document.body.style.overflow = 'auto';
             }
-        });
-
-        // Handle booking form submission
-        bookingForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Collect form data
-            const formData = {
-                fullName: document.getElementById('fullName').value,
-                email: document.getElementById('email').value,
-                phone: document.getElementById('phone').value,
-                players: document.getElementById('players').value,
-                time: document.getElementById('time').value,
-                experience: document.getElementById('experience').value,
-                game: document.getElementById('game').value,
-                specialRequests: document.getElementById('specialRequests').value,
-                date: today.toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })
-            };
-            
-            // In a real application, you would send this data to a server
-            console.log('Booking submitted for today:', formData);
-            
-            // Show success notification
-            showNotification('Today\'s booking request submitted successfully! We will contact you shortly to confirm.', 'success');
-            
-            // Close modal and reset form
-            bookingModal.style.display = 'none';
-            document.body.style.overflow = 'auto';
-            bookingForm.reset();
         });
 
         // Show notification function
