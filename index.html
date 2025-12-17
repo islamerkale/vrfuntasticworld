@@ -941,6 +941,9 @@
             cursor: pointer;
             animation: fadeInUp 0.6s ease-out;
             animation-fill-mode: both;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
         }
 
         .game-card:hover {
@@ -984,6 +987,10 @@
 
         .game-content {
             padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
 
         .game-content h3 {
@@ -991,23 +998,14 @@
             font-weight: 700;
             margin-bottom: 10px;
             color: #fff;
-        }
-
-        .game-content p {
-            color: #94a3b8;
-            font-size: 14px;
-            line-height: 1.5;
-            margin-bottom: 15px;
-        }
-
-        .game-duration {
+            min-height: 60px;
             display: flex;
             align-items: center;
-            gap: 5px;
-            color: #60a5fa;
-            font-weight: 600;
-            font-size: 13px;
-            margin-bottom: 8px;
+        }
+
+        /* Açıklama sayfada görünmüyor, sadece modalda görünecek */
+        .game-content p {
+            display: none; /* Açıklama sayfada görünmüyor */
         }
 
         .game-type {
@@ -1017,23 +1015,9 @@
             color: #06b6d4;
             font-weight: 600;
             font-size: 13px;
-            margin-bottom: 15px;
-        }
-
-        .view-details {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            color: #60a5fa;
-            font-weight: 600;
-            font-size: 14px;
-            transition: all 0.3s;
-            cursor: pointer;
-        }
-
-        .game-card:hover .view-details {
-            color: #06b6d4;
-            transform: translateX(5px);
+            margin-top: auto;
+            padding: 8px 0;
+            border-top: 1px solid rgba(37, 99, 235, 0.2);
         }
 
         /* Experiences Grid */
@@ -1687,6 +1671,7 @@
             color: #cbd5e1;
             line-height: 1.6;
             font-size: 16px;
+            margin-bottom: 20px;
         }
 
         .modal-details {
@@ -1821,6 +1806,11 @@
             .ride-card-content {
                 flex-direction: column;
                 text-align: center;
+            }
+            
+            .game-content h3 {
+                min-height: auto;
+                font-size: 18px;
             }
         }
 
@@ -2152,15 +2142,7 @@
         <h3 class="game-title">MINECRAFT ROLLER COASTER</h3>
 
         <div class="game-details">
-            <p>
-                Experience the blocky world of Minecraft like never before! Ride through amazing roller coaster tracks built in the iconic Minecraft style.
-            </p>
-
-            <div class="game-duration">
-                <i class="far fa-clock"></i>
-                <span>DURATION: 8:15</span>
-            </div>
-
+            <!-- Açıklama burada görünmüyor -->
             <div class="game-type">
                 <i class="fas fa-tag"></i>
                 <span>MINECRAFT THEME ROLLER COASTER</span>
@@ -2174,16 +2156,10 @@
                     <div class="game-image" style="background-image: url('water-splash.jpg')"></div>
                     <div class="game-content">
                         <h3>WATER SPLASH ADVENTURE</h3>
-                        <p>Dive into an underwater roller coaster experience! Ride through coral reefs, underwater caves, and encounter amazing sea creatures.</p>
-                        <div class="game-duration">
-                            <i class="far fa-clock"></i>
-                            <span>DURATION: 7:45</span>
-                        </div>
                         <div class="game-type">
                             <i class="fas fa-tag"></i>
                             <span>UNDERWATER ROLLER COASTER</span>
                         </div>
-                        <div class="view-details">View Details <i class="fas fa-arrow-right"></i></div>
                     </div>
                 </div>
 
@@ -2191,16 +2167,10 @@
                     <div class="game-image" style="background-image: url('mario-adventure.jpg')"></div>
                     <div class="game-content">
                         <h3>SUPER MARIO ADVENTURE</h3>
-                        <p>Jump into the Mushroom Kingdom! Join Mario on an exciting adventure through colorful worlds, collecting coins and avoiding enemies.</p>
-                        <div class="game-duration">
-                            <i class="far fa-clock"></i>
-                            <span>DURATION: 7:30</span>
-                        </div>
                         <div class="game-type">
                             <i class="fas fa-tag"></i>
                             <span>MARIO THEME ADVENTURE</span>
                         </div>
-                        <div class="view-details">View Details <i class="fas fa-arrow-right"></i></div>
                     </div>
                 </div>
 
@@ -2208,16 +2178,10 @@
                     <div class="game-image" style="background-image: url('gamma-bear.jpg')"></div>
                     <div class="game-content">
                         <h3>GAMMA BEAR'S HAPPY WORLD</h3>
-                        <p>Perfect for young children! Join Gamma Bear in a gentle, colorful world filled with friendly animals and simple, fun activities.</p>
-                        <div class="game-duration">
-                            <i class="far fa-clock"></i>
-                            <span>DURATION: 6:15</span>
-                        </div>
                         <div class="game-type">
                             <i class="fas fa-tag"></i>
                             <span>KIDS FRIENDLY GENTLE ADVENTURE</span>
                         </div>
-                        <div class="view-details">View Details <i class="fas fa-arrow-right"></i></div>
                     </div>
                 </div>
 
@@ -2226,16 +2190,10 @@
                     <div class="game-image" style="background-image: url('Dungeon rampage.jpg')"></div>
                     <div class="game-content">
                         <h3>DUNGEAN RAMPAGE</h3>
-                        <p>Enter a dark dungeon filled with enemies and action. A fast-paced roller coaster combined with intense shooting gameplay.</p>
-                        <div class="game-duration">
-                            <i class="far fa-clock"></i>
-                            <span>DURATION: 7:55</span>
-                        </div>
                         <div class="game-type">
                             <i class="fas fa-tag"></i>
                             <span>ROLLER COASTER & SHOOTING</span>
                         </div>
-                        <div class="view-details">View Details <i class="fas fa-arrow-right"></i></div>
                     </div>
                 </div>
 
@@ -2243,16 +2201,10 @@
                     <div class="game-image" style="background-image: url('ATLANTIS.jpg')"></div>
                     <div class="game-content">
                         <h3>THE LOST EMPIRE ATLANTIS</h3>
-                        <p>Explore the legendary underwater city of Atlantis while fighting mysterious enemies. A visually stunning underwater shooting adventure.</p>
-                        <div class="game-duration">
-                            <i class="far fa-clock"></i>
-                            <span>DURATION: 6:55</span>
-                        </div>
                         <div class="game-type">
                             <i class="fas fa-tag"></i>
                             <span>UNDERWATER SHOOTING</span>
                         </div>
-                        <div class="view-details">View Details <i class="fas fa-arrow-right"></i></div>
                     </div>
                 </div>
 
@@ -2260,16 +2212,10 @@
                     <div class="game-image" style="background-image: url('MUMMY.jpg')"></div>
                     <div class="game-content">
                         <h3>MUMMY</h3>
-                        <p>Travel inside ancient pyramids and face hidden dangers. A thrilling shooting experience set in a mysterious mummy-themed environment.</p>
-                        <div class="game-duration">
-                            <i class="far fa-clock"></i>
-                            <span>DURATION: 6:47</span>
-                        </div>
                         <div class="game-type">
                             <i class="fas fa-tag"></i>
                             <span>MUMMY SHOOTING IN PYRAMID</span>
                         </div>
-                        <div class="view-details">View Details <i class="fas fa-arrow-right"></i></div>
                     </div>
                 </div>
 
@@ -2277,16 +2223,10 @@
                     <div class="game-image" style="background-image: url('CJ7.jpg')"></div>
                     <div class="game-content">
                         <h3>YANGZTE RIVER (CJ7)</h3>
-                        <p>A cute and colorful cartoon-style shooting game inspired by a fun fantasy world. Lighthearted and enjoyable for all audiences.</p>
-                        <div class="game-duration">
-                            <i class="far fa-clock"></i>
-                            <span>DURATION: 6:35</span>
-                        </div>
                         <div class="game-type">
                             <i class="fas fa-tag"></i>
                             <span>CUTE, CARTOONIE SHOOTING GAME</span>
                         </div>
-                        <div class="view-details">View Details <i class="fas fa-arrow-right"></i></div>
                     </div>
                 </div>
 
@@ -2294,16 +2234,10 @@
                     <div class="game-image" style="background-image: url('FUTURE TER 2.jpg')"></div>
                     <div class="game-content">
                         <h3>FUTURE TERMINATOR 2</h3>
-                        <p>Continue the fight in a futuristic world full of action. The second part of the FPS series with more enemies and excitement.</p>
-                        <div class="game-duration">
-                            <i class="far fa-clock"></i>
-                            <span>DURATION: 6:32</span>
-                        </div>
                         <div class="game-type">
                             <i class="fas fa-tag"></i>
                             <span>FPS – 2nd Part of the Game</span>
                         </div>
-                        <div class="view-details">View Details <i class="fas fa-arrow-right"></i></div>
                     </div>
                 </div>
 
@@ -2311,16 +2245,10 @@
                     <div class="game-image" style="background-image: url('ZOMBIE MASTER.jpg')"></div>
                     <div class="game-content">
                         <h3>ZOMBIE MASTER</h3>
-                        <p>Battle against Chinese-style zombies in an action-packed shooting experience. Fast, intense, and full of adrenaline.</p>
-                        <div class="game-duration">
-                            <i class="far fa-clock"></i>
-                            <span>DURATION: 6:30</span>
-                        </div>
                         <div class="game-type">
                             <i class="fas fa-tag"></i>
                             <span>CHINESE ZOMBIE SHOOTING</span>
                         </div>
-                        <div class="view-details">View Details <i class="fas fa-arrow-right"></i></div>
                     </div>
                 </div>
 
@@ -2328,16 +2256,10 @@
                     <div class="game-image" style="background-image: url('FUTURE TER.jpg')"></div>
                     <div class="game-content">
                         <h3>FUTURE TERMINATOR</h3>
-                        <p>Enter a sci-fi battlefield and fight powerful enemies. A classic FPS experience set in a futuristic world.</p>
-                        <div class="game-duration">
-                            <i class="far fa-clock"></i>
-                            <span>DURATION: 6:26</span>
-                        </div>
                         <div class="game-type">
                             <i class="fas fa-tag"></i>
                             <span>FPS</span>
                         </div>
-                        <div class="view-details">View Details <i class="fas fa-arrow-right"></i></div>
                     </div>
                 </div>
 
@@ -2345,16 +2267,10 @@
                     <div class="game-image" style="background-image: url('MID AUTUMN.jpg')"></div>
                     <div class="game-content">
                         <h3>MID AUTUMN FESTIVAL</h3>
-                        <p>Celebrate traditional Chinese culture with beautiful visuals inspired by the Mid-Autumn Festival and Chinese New Year.</p>
-                        <div class="game-duration">
-                            <i class="far fa-clock"></i>
-                            <span>DURATION: 6:20</span>
-                        </div>
                         <div class="game-type">
                             <i class="fas fa-tag"></i>
                             <span>CHINESE NEW YEAR, MID AUTUMN FESTIVAL</span>
                         </div>
-                        <div class="view-details">View Details <i class="fas fa-arrow-right"></i></div>
                     </div>
                 </div>
 
@@ -2362,16 +2278,10 @@
                     <div class="game-image" style="background-image: url('dread eye.jpg')"></div>
                     <div class="game-content">
                         <h3>DREAD EYE – THE BEST SCARY EXPERIENCE</h3>
-                        <p>Face your deepest fears in one of the most intense horror VR experiences. Dark atmosphere and strong thrill elements.</p>
-                        <div class="game-duration">
-                            <i class="far fa-clock"></i>
-                            <span>DURATION: 6:10</span>
-                        </div>
                         <div class="game-type">
                             <i class="fas fa-tag"></i>
                             <span>THRILL</span>
                         </div>
-                        <div class="view-details">View Details <i class="fas fa-arrow-right"></i></div>
                     </div>
                 </div>
 
@@ -2379,16 +2289,10 @@
                     <div class="game-image" style="background-image: url('ADVENTURES.jpg')"></div>
                     <div class="game-content">
                         <h3>ADVENTURES</h3>
-                        <p>Ride a pirate ship and fight enemies along the way. A fun mix of shooting game and amusement ride experience.</p>
-                        <div class="game-duration">
-                            <i class="far fa-clock"></i>
-                            <span>DURATION: 6:07</span>
-                        </div>
                         <div class="game-type">
                             <i class="fas fa-tag"></i>
                             <span>PIRATE SHIP SHOOTING GAME & RIDE</span>
                         </div>
-                        <div class="view-details">View Details <i class="fas fa-arrow-right"></i></div>
                     </div>
                 </div>
 
@@ -2396,16 +2300,10 @@
                     <div class="game-image" style="background-image: url('DANCE DREAM.jpg')"></div>
                     <div class="game-content">
                         <h3>DREAM DANCE</h3>
-                        <p>Enjoy a colorful virtual dance show filled with music, lights, and movement. A concert-style visual experience.</p>
-                        <div class="game-duration">
-                            <i class="far fa-clock"></i>
-                            <span>DURATION: 5:25</span>
-                        </div>
                         <div class="game-type">
                             <i class="fas fa-tag"></i>
                             <span>DANCE SHOW CONCERT</span>
                         </div>
-                        <div class="view-details">View Details <i class="fas fa-arrow-right"></i></div>
                     </div>
                 </div>
 
@@ -2413,16 +2311,10 @@
                     <div class="game-image" style="background-image: url('eagle.jpg')"></div>
                     <div class="game-content">
                         <h3>EAGLE IN NATURE</h3>
-                        <p>Fly freely like an eagle over stunning natural landscapes. A smooth flying experience with minimal motion sickness.</p>
-                        <div class="game-duration">
-                            <i class="far fa-clock"></i>
-                            <span>DURATION: 5:20</span>
-                        </div>
                         <div class="game-type">
                             <i class="fas fa-tag"></i>
                             <span>FLYING EXPERIENCE (LEAST MOTION SICKNESS)</span>
                         </div>
-                        <div class="view-details">View Details <i class="fas fa-arrow-right"></i></div>
                     </div>
                 </div>
 
@@ -2430,16 +2322,10 @@
                     <div class="game-image" style="background-image: url('KARTING.jpg')"></div>
                     <div class="game-content">
                         <h3>CRAZY RACING</h3>
-                        <p>Race through fun and colorful tracks in a cartoon-style karting world. Fast, exciting, and entertaining.</p>
-                        <div class="game-duration">
-                            <i class="far fa-clock"></i>
-                            <span>DURATION: 5:05</span>
-                        </div>
                         <div class="game-type">
                             <i class="fas fa-tag"></i>
                             <span>KARTING, CARTOONIE</span>
                         </div>
-                        <div class="view-details">View Details <i class="fas fa-arrow-right"></i></div>
                     </div>
                 </div>
 
@@ -2447,16 +2333,10 @@
                     <div class="game-image" style="background-image: url('ENEMY MINE.jpg')"></div>
                     <div class="game-content">
                         <h3>ENEMY MINE</h3>
-                        <p>Fight alongside heroes in a power-packed shooting adventure. Action-filled gameplay inspired by classic hero battles.</p>
-                        <div class="game-duration">
-                            <i class="far fa-clock"></i>
-                            <span>DURATION: 4:00</span>
-                        </div>
                         <div class="game-type">
                             <i class="fas fa-tag"></i>
                             <span>POWER RANGERS SHOOTING</span>
                         </div>
-                        <div class="view-details">View Details <i class="fas fa-arrow-right"></i></div>
                     </div>
                 </div>
 
@@ -2464,16 +2344,10 @@
                     <div class="game-image" style="background-image: url('birdy king duration.jpg')"></div>
                     <div class="game-content">
                         <h3>BIRDY KING LAND</h3>
-                        <p>Ride through a crazy cartoon world on a high-speed motorcycle. Short, fun, and full of excitement.</p>
-                        <div class="game-duration">
-                            <i class="far fa-clock"></i>
-                            <span>DURATION: 3:00</span>
-                        </div>
                         <div class="game-type">
                             <i class="fas fa-tag"></i>
                             <span>CRAZY MOTORCYCLE RIDE IN CARTOON WORLD</span>
                         </div>
-                        <div class="view-details">View Details <i class="fas fa-arrow-right"></i></div>
                     </div>
                 </div>
 
@@ -2481,16 +2355,10 @@
                     <div class="game-image" style="background-image: url('dragon fly.jpg')"></div>
                     <div class="game-content">
                         <h3>DRAGON FLY (THE MAGICAL SISTERS)</h3>
-                        <p>Fly through a magical cartoon world with dragons and fantasy scenery. A charming and smooth flying experience.</p>
-                        <div class="game-duration">
-                            <i class="far fa-clock"></i>
-                            <span>DURATION: 2:52</span>
-                        </div>
                         <div class="game-type">
                             <i class="fas fa-tag"></i>
                             <span>FLYING EXPERIENCE IN CARTOON WORLD</span>
                         </div>
-                        <div class="view-details">View Details <i class="fas fa-arrow-right"></i></div>
                     </div>
                 </div>
             </div>
@@ -2697,10 +2565,7 @@
                 <div class="modal-info">
                     <p class="modal-description" id="modalDescription">Game description will appear here.</p>
                     <div class="modal-details">
-                        <div class="detail-item">
-                            <span class="detail-label">Duration</span>
-                            <span class="detail-value" id="modalDuration">7:55</span>
-                        </div>
+                        <!-- Duration kaldırıldı -->
                         <div class="detail-item">
                             <span class="detail-label">Style / Type</span>
                             <span class="detail-value" id="modalType">Roller Coaster & Shooting</span>
@@ -2940,7 +2805,6 @@
                 title: "MINECRAFT ROLLER COASTER",
                 description: "Experience the blocky world of Minecraft like never before! Ride through amazing roller coaster tracks built in the iconic Minecraft style. Explore different biomes, encounter Minecraft creatures, and enjoy the unique block-based visuals.",
                 category: "Roller Coaster",
-                duration: "8:15",
                 type: "MINECRAFT THEME ROLLER COASTER",
                 intensity: "Medium",
                 image: "mine-coaster.jpg"
@@ -2949,7 +2813,6 @@
                 title: "WATER SPLASH ADVENTURE",
                 description: "Dive into an underwater roller coaster experience! Ride through coral reefs, underwater caves, and encounter amazing sea creatures. Feel the thrill as you splash through water tunnels and explore the beautiful ocean world.",
                 category: "Roller Coaster",
-                duration: "7:45",
                 type: "UNDERWATER ROLLER COASTER",
                 intensity: "Medium",
                 image: "water-splash.jpg"
@@ -2958,7 +2821,6 @@
                 title: "SUPER MARIO ADVENTURE",
                 description: "Jump into the Mushroom Kingdom! Join Mario on an exciting adventure through colorful worlds, collecting coins, avoiding enemies, and experiencing the magic of the Mario universe. Perfect for fans of all ages.",
                 category: "Fantasy",
-                duration: "7:30",
                 type: "MARIO THEME ADVENTURE",
                 intensity: "Low",
                 image: "mario-adventure.jpg"
@@ -2967,7 +2829,6 @@
                 title: "GAMMA BEAR'S HAPPY WORLD",
                 description: "Perfect for young children! Join Gamma Bear in a gentle, colorful world filled with friendly animals and simple, fun activities. This experience is designed specifically for young kids with no scary elements.",
                 category: "Fantasy",
-                duration: "6:15",
                 type: "KIDS FRIENDLY GENTLE ADVENTURE",
                 intensity: "Very Low",
                 image: "gamma-bear.jpg"
@@ -2976,7 +2837,6 @@
                 title: "DUNGEAN RAMPAGE",
                 description: "Enter a dark dungeon filled with enemies and action. A fast-paced roller coaster combined with intense shooting gameplay.",
                 category: "Roller Coaster",
-                duration: "7:55",
                 type: "ROLLER COASTER & SHOOTING",
                 intensity: "High",
                 image: "Dungeon rampage.jpg"
@@ -2985,7 +2845,6 @@
                 title: "THE LOST EMPIRE ATLANTIS",
                 description: "Explore the legendary underwater city of Atlantis while fighting mysterious enemies. A visually stunning underwater shooting adventure.",
                 category: "Shooting",
-                duration: "6:55",
                 type: "UNDERWATER SHOOTING",
                 intensity: "Medium",
                 image: "ATLANTIS.jpg"
@@ -2994,7 +2853,6 @@
                 title: "MUMMY",
                 description: "Travel inside ancient pyramids and face hidden dangers. A thrilling shooting experience set in a mysterious mummy-themed environment.",
                 category: "Shooting",
-                duration: "6:47",
                 type: "MUMMY SHOOTING IN PYRAMID",
                 intensity: "Medium",
                 image: "MUMMY.jpg"
@@ -3003,7 +2861,6 @@
                 title: "YANGZTE RIVER (CJ7)",
                 description: "A cute and colorful cartoon-style shooting game inspired by a fun fantasy world. Lighthearted and enjoyable for all audiences.",
                 category: "Fantasy",
-                duration: "6:35",
                 type: "CUTE, CARTOONIE SHOOTING GAME",
                 intensity: "Low",
                 image: "CJ7.jpg"
@@ -3012,7 +2869,6 @@
                 title: "FUTURE TERMINATOR 2",
                 description: "Continue the fight in a futuristic world full of action. The second part of the FPS series with more enemies and excitement.",
                 category: "Shooting",
-                duration: "6:32",
                 type: "FPS – 2nd Part of the Game",
                 intensity: "High",
                 image: "FUTURE TER 2.jpg"
@@ -3021,7 +2877,6 @@
                 title: "ZOMBIE MASTER",
                 description: "Battle against Chinese-style zombies in an action-packed shooting experience. Fast, intense, and full of adrenaline.",
                 category: "Horror",
-                duration: "6:30",
                 type: "CHINESE ZOMBIE SHOOTING",
                 intensity: "High",
                 image: "ZOMBIE MASTER.jpg"
@@ -3030,7 +2885,6 @@
                 title: "FUTURE TERMINATOR",
                 description: "Enter a sci-fi battlefield and fight powerful enemies. A classic FPS experience set in a futuristic world.",
                 category: "Shooting",
-                duration: "6:26",
                 type: "FPS",
                 intensity: "High",
                 image: "FUTURE TER.jpg"
@@ -3039,7 +2893,6 @@
                 title: "MID AUTUMN FESTIVAL",
                 description: "Celebrate traditional Chinese culture with beautiful visuals inspired by the Mid-Autumn Festival and Chinese New Year.",
                 category: "Adventure",
-                duration: "6:20",
                 type: "CHINESE NEW YEAR, MID AUTUMN FESTIVAL",
                 intensity: "Low",
                 image: "MID AUTUMN.jpg"
@@ -3048,7 +2901,6 @@
                 title: "DREAD EYE – THE BEST SCARY EXPERIENCE",
                 description: "Face your deepest fears in one of the most intense horror VR experiences. Dark atmosphere and strong thrill elements.",
                 category: "Horror",
-                duration: "6:10",
                 type: "THRILL",
                 intensity: "Very High",
                 image: "dread eye.jpg"
@@ -3057,7 +2909,6 @@
                 title: "ADVENTURES",
                 description: "Ride a pirate ship and fight enemies along the way. A fun mix of shooting game and amusement ride experience.",
                 category: "Adventure",
-                duration: "6:07",
                 type: "PIRATE SHIP SHOOTING GAME & RIDE",
                 intensity: "Medium",
                 image: "ADVENTURES.jpg"
@@ -3066,7 +2917,6 @@
                 title: "DREAM DANCE",
                 description: "Enjoy a colorful virtual dance show filled with music, lights, and movement. A concert-style visual experience.",
                 category: "Fantasy",
-                duration: "5:25",
                 type: "DANCE SHOW CONCERT",
                 intensity: "Low",
                 image: "DANCE DREAM.jpg"
@@ -3075,7 +2925,6 @@
                 title: "EAGLE IN NATURE",
                 description: "Fly freely like an eagle over stunning natural landscapes. A smooth flying experience with minimal motion sickness.",
                 category: "Adventure",
-                duration: "5:20",
                 type: "FLYING EXPERIENCE (LEAST MOTION SICKNESS)",
                 intensity: "Low",
                 image: "eagle.jpg"
@@ -3084,7 +2933,6 @@
                 title: "CRAZY RACING",
                 description: "Race through fun and colorful tracks in a cartoon-style karting world. Fast, exciting, and entertaining.",
                 category: "Fantasy",
-                duration: "5:05",
                 type: "KARTING, CARTOONIE",
                 intensity: "Medium",
                 image: "KARTING.jpg"
@@ -3093,7 +2941,6 @@
                 title: "ENEMY MINE",
                 description: "Fight alongside heroes in a power-packed shooting adventure. Action-filled gameplay inspired by classic hero battles.",
                 category: "Shooting",
-                duration: "4:00",
                 type: "POWER RANGERS SHOOTING",
                 intensity: "Medium",
                 image: "ENEMY MINE.jpg"
@@ -3102,7 +2949,6 @@
                 title: "BIRDY KING LAND",
                 description: "Ride through a crazy cartoon world on a high-speed motorcycle. Short, fun, and full of excitement.",
                 category: "Fantasy",
-                duration: "3:00",
                 type: "CRAZY MOTORCYCLE RIDE IN CARTOON WORLD",
                 intensity: "Medium",
                 image: "birdy king duration.jpg"
@@ -3111,7 +2957,6 @@
                 title: "DRAGON FLY (THE MAGICAL SISTERS)",
                 description: "Fly through a magical cartoon world with dragons and fantasy scenery. A charming and smooth flying experience.",
                 category: "Fantasy",
-                duration: "2:52",
                 type: "FLYING EXPERIENCE IN CARTOON WORLD",
                 intensity: "Low",
                 image: "dragon fly.jpg"
@@ -3124,7 +2969,6 @@
         const modalTitle = document.getElementById('modalTitle');
         const modalDescription = document.getElementById('modalDescription');
         const modalCategory = document.getElementById('modalCategory');
-        const modalDuration = document.getElementById('modalDuration');
         const modalType = document.getElementById('modalType');
         const modalIntensity = document.getElementById('modalIntensity');
         const modalImage = document.getElementById('modalImage');
@@ -3139,7 +2983,6 @@
                     modalTitle.textContent = game.title;
                     modalDescription.textContent = game.description;
                     modalCategory.textContent = game.category;
-                    modalDuration.textContent = game.duration;
                     modalType.textContent = game.type;
                     modalIntensity.textContent = game.intensity;
                     modalImage.style.backgroundImage = `url('${game.image}')`;
