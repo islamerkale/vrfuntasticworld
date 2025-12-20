@@ -2446,18 +2446,27 @@
                         </button>
                     </div>
                 </div>
-                <div class="location-card">
-                    <div class="location-image" style="background-image: url('gobo.jpg')"></div>
-                    <div class="location-info">
-                        <h3>GOBO VR</h3>
-                        <p> 10355 152 St, Guildford Town Centre<br>Open: 12 PM - 9 PM MON-FRI, 11 AM - 9 PM SAT, 11 AM - 6:30 PM SUN</p>
-                        <button class="map-button modern-button" onclick="window.open('https://maps.app.goo.gl/FpunpTL4X9uEHd6V7', '_blank')">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>View on Map</span>
-                        </button>
-                    </div>
-                </div>
-            </div>
+               <div class="location-card"
+     onclick="window.open('https://gobovr.com', '_blank')"
+     style="cursor: pointer;">
+
+    <div class="location-image" style="background-image: url('gobo.jpg')"></div>
+
+    <div class="location-info">
+        <h3>GOBO VR</h3>
+        <p>
+            10355 152 St, Guildford Town Centre<br>
+            Open: 12 PM - 9 PM MON-FRI, 11 AM - 9 PM SAT, 11 AM - 6:30 PM SUN
+        </p>
+
+        <button class="map-button modern-button"
+            onclick="event.stopPropagation(); window.open('https://maps.app.goo.gl/FpunpTL4X9uEHd6V7', '_blank')">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>View on Map</span>
+        </button>
+    </div>
+</div>
+
         </section>
 
         <!-- CTA Section -->
